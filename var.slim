@@ -1,0 +1,38 @@
+- date     = "0915";
+- $bt_RE = ["boutique/rayon_evenement.aspx?pg=0&evenement_id=","546"];
+- $catLink = "http://www.mariannemelodie.fr/cat/fr/ECatalog.htm";
+
+- $pan1_pck1_lib = "100% Retro : 1920-1945"; $pan1_pck2_lib   = ["Jean-Claude Darnal",""];
+- $pan2_pck3_lib = ["Les plus belles chansons Françaises accompagnées à l'orgue",""]; $pan2_pck4_lib   = "Gilbert Bécaud : L'Essentiel";
+/ - $pan3_pck5_lib = "Grand Séducteur 78T"; $pan3_pck6_lib   = ["Bob Castel",""];
+
+- $pan1_pck1_price = "19.95 €"; $pan1_pck2_price   = "9.90 €";
+- $pan2_pck3_price = "14.90 €"; $pan2_pck4_price   = "19.95 €";
+/ - $pan3_pck5_price = "14.90 €"; $pan3_pck6_price   = "13.90 €";
+
+- $pan1_pck1_capacity = "4 CD"; $pan1_pck2_capacity = "2 CD";
+- $pan2_pck3_capacity = "2 CD"; $pan2_pck4_capacity = "DVD";
+/ - $pan3_pck5_capacity = "CD"; $pan3_pck6_capacity = "CD";
+
+- $urlbase = ["http://www.mariannemelodie.fr/fr/",".html"];
+- $ref = ["0","8902348","8903346","8904344","8521346"];
+- $pan1_pck1_link    = $urlbase[0]+"cd-chansons-lyrique/variete-francaise-best-of-compilation/retro-1920-1945/"+$ref[1]+$urlbase[1];
+- $pan1_pck2_link    = $urlbase[0]+"cd-chansons-lyrique/variete-francaise-annees-60/jean-claude-darnal/"+$ref[2]+$urlbase[1];
+- $pan2_pck3_link    = $urlbase[0]+"cd-chansons-lyrique/variete-francaise-best-of-compilation/plus-belles-chansons-francaises-orgue/"+$ref[3]+$urlbase[1];
+- $pan2_pck4_link    = $urlbase[0]+"dvd-tv/divertissement-variete/gilbert-becaud-essentiel/"+$ref[4]+$urlbase[1];
+/ - $pan3_pck5_link    = $urlbase[0]+"cd-chansons-lyrique/variete-francaise-best-of-compilation/grand-seducteur-78T/"+$ref[5]+$urlbase[1];
+/ - $pan3_pck6_link    = $urlbase[0]+"cd-chansons-lyrique/variete-francaise-annees-90-plus/bob-castel/"+$ref[6]+$urlbase[1];
+
+- $gaq_init      = "ga('local.send', 'event', ";
+- $gaq_cat       = "'EncartHP_Ecata', ";
+- $gaq_dateCat   = "'EncartHP_Ecata_"+date+"', ";
+- $gaq_loc       = "document.location.pathname);";
+
+- $gaq_pck_start = "ga('local.send', 'event', 'encartHP_"+date+"', ";
+- $gaq_pck_end   = $gaq_loc;
+- $gaq_pck1_pdt = "'pdt_1a-"+$ref[1]+"', "; $gaq_pck1_btn  = "'btn_1a-"+$ref[1]+"', ";
+- $gaq_pck2_pdt = "'pdt_1b-"+$ref[2]+"', "; $gaq_pck2_btn  = "'btn_1b-"+$ref[2]+"', ";
+- $gaq_pck3_pdt = "'pdt_1a-"+$ref[3]+"', "; $gaq_pck3_btn  = "'btn_1a-"+$ref[3]+"', ";
+- $gaq_pck4_pdt = "'pdt_1b-"+$ref[4]+"', "; $gaq_pck4_btn  = "'btn_1b-"+$ref[4]+"', ";
+/ - $gaq_pck5_pdt = "'pdt_1a-"+$ref[5]+"', "; $gaq_pck5_btn  = "'btn_1a-"+$ref[5]+"', ";
+/ - $gaq_pck6_pdt = "'pdt_1b-"+$ref[6]+"', "; $gaq_pck6_btn  = "'btn_1b-"+$ref[6]+"', ";

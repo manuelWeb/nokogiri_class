@@ -1,0 +1,168 @@
+@import "compass/css3";
+@import "compass/support";
+// $debug-browser-support: true;
+$ftss: Arial, Helvetica, sans-serif;
+$fts: Georgia, Times, "Times New Roman", serif;
+$primary-color: #922625;
+//,body{font: 11px Century Gothic,Arial;}
+.fl-l {float: left; }
+// conteneur
+.centralEvent {
+  position: relative; width: 964px; height: 465px; margin: 0;
+  overflow: hidden;
+  font-family: $fts;
+  border: solid 1px #eee;
+  background: url(bg.jpg) no-repeat;
+}
+// packContent>ul / panX>li
+.packContent {
+  position: absolute; left: 218px; top: 15px; margin: 0; padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.pan1, .pan2, .pan3, .pan4, .pan5 {display: none; }
+.noscript {display: block; }
+// cat / link text
+.cataLink {
+  float: left; margin: 0 0 0 2px;
+  text-decoration: none;
+  img {
+    border: none;
+  }
+}
+h1 {
+  position: absolute; top: 140px; left: 0; width: auto; margin: 0 0 0 18px;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0070BA;
+    font: bold 16px/125% Arial, Helvetica, sans-serif;
+    &:hover {
+      text-decoration: underline;
+      color: #991F23;
+    }
+    span {
+      color: #EB1A22;
+      text-decoration: underline;
+    }
+  }
+}
+// pck conteneur
+.pck1, .pck2, .pck3, .pck4, .pck5, .pck6, .pck7, .pck8, .pck9, .pck10 {
+  float: left; width: 260px; height: 250px;
+}
+.pck1 h2 + a, .pck2 h2 + a, .pck3 h2 + a, .pck4 h2 + a, .pck5 h2 + a, .pck6 h2 + a {
+  display: block;
+  text-decoration: none;
+}
+.centralEvent i {
+  display: inline-block; width: 40px; height: 40px; margin-top: 60px; padding: 6px;
+  vertical-align: top;
+  font: bold 12px/60px $ftss; color: #222; text-align: center;
+  background-color: #F0F000;
+  @include border-radius(400px);
+  span {
+    display: inline-block;
+    line-height: 16px;
+  }
+}
+// bubble designation
+.bubble_fe {
+  position: relative;
+  max-width: 226px; min-width: 152px; min-height: 40px; margin: 0 0 10px; padding: 5px 10px;
+  line-height: 38px;
+  background: #991F23;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0; height: 0; left: 0; bottom: -16px;
+    margin-left: 15px;
+    border-color: #991F23 transparent transparent transparent;
+    border-style: solid;
+    border-width: 8px;
+  }
+}
+.firstEvt_h2 {
+  position: relative;
+  display: inline-block;
+  line-height: 16px; vertical-align: middle;
+  color: #FFFFFF; font-size: 16px; font-style: italic; font-weight: normal;
+}
+//.pck1 .bubble_fe{background-color:#E41D22;}.pck1 .bubble_fe:after{border-top-color: #E41D22;}
+.bubble_fe + a img {border: none; }
+// Price and buttons
+.evtC_price {
+  vertical-align: top;
+  text-shadow: 0px 0px 3px #fff;
+  font: bold 21px/34px Arial, Helvetica, sans-serif;
+  color: #0070BB;
+}
+ .btPck {
+  display: inline-block; margin: 0;
+  border: none;
+  text-decoration: none;
+  img {
+    margin-left: 30px;
+    border: none;
+  }
+}
+// selection buttons
+.bt-carroussel {
+  float: right; width: 120px; height: 78px; margin: 16px 0; padding: 0;
+  list-style: none;
+  background: url(bg_btCarrousel.png) no-repeat;
+  li {
+    display: block; float: left; margin-right: 8px;
+    line-height: 32px;
+    cursor: pointer;
+    font-family: $ftss; font-weight: bold; font-size: 21px; color: #fff; text-align: center;
+    &.pckOne a, &.pckTwo a, &.pckThree a, &.pckFour a, &.pckFive a {
+      display: block; width: 32px; height: 32px;
+      text-decoration: none; color: #fff;
+    }
+  }
+}
+li {
+  &.pckOne a:hover, &.pckTwo a:hover, &.pckThree a:hover, &.pckFour a:hover, &.pckFive a:hover {
+    background: url(bt-carrous-hover.png) no-repeat scroll 0 0 transparent;
+  }
+}
+.bt-carroussel li.pckActif {background-position: 0 0; }
+.bt_RE {
+  position: absolute; top: 222px; left: 684px; width: 262px; height: 34px;
+  background: url(btn_RE_ON.png) no-repeat 0 0;
+  img {
+    border: none;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0s;
+    &:hover {
+      opacity: 0;
+    }
+  }
+}
+// .bt_RE span {position: absolute;top: 0;right: 0;bottom: 0;left: 0; background-image: url(btn_RE.png);opacity: 0; -webkit-transition: opacity 0.5s ease 0s; transition: opacity 0.5s ease 0s;}
+.bt_RE:hover span{ opacity: 1; }
+// masque la pastille rouge sur item actif
+#hpAnimCo li.pckOne.pckActif a:hover {background-image: none; }
+li {
+  &.pckTwo.pckActif a:hover, &.pckThree.pckActif a:hover, &.pckFour.pckActif a:hover, &.pckFive.pckActif a:hover {
+    background-image: none;
+  }
+}
+#content-bt {
+  position: absolute; right: 0px; top: 105px; width: 166px;
+  background: url(L-arrow.png) no-repeat scroll 0 16px transparent;
+}
+
+#evt-click {
+  display: inline-block; float: left; height: 34px; width: 36px; margin-top: 15px;
+}
+#content-bt p {
+  position: absolute; left: 0; margin: 0;
+  font: bold  16px/18px arial; color: #0070BB; text-transform: capitalize;
+}
+i span.valignM {line-height: 40px; vertical-align: top; }
+// class OCSS
+.upperTxt {text-transform: uppercase; }
+.small_txt {font-size: 12px; }
+.medium_txt {font-size: 14px; }

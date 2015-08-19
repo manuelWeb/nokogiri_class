@@ -1,0 +1,123 @@
+/ importation des variables
+== Slim::Template.new('var.slim').render
+/ class :
+/ small text  > .small_txt
+/ medium text > .medium_txt
+/ upperText   > .upperTxt
+doctype strict
+html[xmlns="http://www.w3.org/1999/xhtml"]
+  head
+    meta http-equiv="Content-Type" content="text/html;charset=UTF-8"
+    link rel="stylesheet" type="text/css" href="index.css" media="all"
+    script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"
+    script type="text/javascript" src="jquery.easing.1.3.js"
+    script type="text/javascript" src="cookie_evt.js"
+    script type="text/javascript" src="anime_content-bt.js"
+    title MM_centralEvt
+  
+  body
+    .centralEvent
+
+      a.cataLink href==($catLink)  target="_blank" onclick==($gaq_init+$gaq_cat+$gaq_dateCat+$gaq_loc)
+        img src="cat.jpg" alt="" width="128" height="140"
+
+      h1
+        a href==($catLink) target="_blank" onclick==($gaq_init+$gaq_cat+$gaq_dateCat+$gaq_loc)
+          |
+            Feuilletez <br />
+            le nouveau <br />
+            catalogue ! <br />
+          span cliquez ici
+      ul.packContent
+
+        li.noscript
+          noscript
+            .pck1
+              h2.fl-l.bubble_fe
+                span.firstEvt_h2==($pan1_pck1_lib)
+              a href==($pan1_pck1_link)
+                img src="pck1.png" alt="" height="144"
+                i
+                  span.valignM==($pan1_pck1_capacity)
+              a.btPck href==($pan1_pck1_link)
+                span.evtC_price==($pan1_pck1_price)
+                img src="btPck.png" alt="" width="82" height="34"
+
+            .pck2
+              h2.fl-l.bubble_fe
+                span.firstEvt_h2
+                  ==($pan1_pck2_lib[0])
+                  br
+                  ==($pan1_pck2_lib[1])
+              a href==($pan1_pck2_link)
+                img src="pck2.png" alt="" height="144"
+                i
+                  span.valignM==($pan1_pck2_capacity)
+              a.btPck href==($pan1_pck2_link)
+                span.evtC_price=$pan1_pck2_price
+                img src="btPck.png" alt="" width="82" height="34"
+        li.pan1
+          .pck1
+            h2.fl-l.bubble_fe
+              span.firstEvt_h2==($pan1_pck1_lib)
+            a href==($pan1_pck1_link) onclick==($gaq_pck_start+$gaq_pck1_pdt+$gaq_pck_end)
+              img src="pck1.png" alt="" height="144"
+              i
+                span.valignM==($pan1_pck1_capacity)
+            a.btPck href=$pan1_pck1_link onclick==$gaq_pck_start+$gaq_pck1_btn+$gaq_pck_end
+              span.evtC_price=$pan1_pck1_price
+              img src="btPck.png" alt="" width="82" height="34"
+
+          .pck2
+            h2.fl-l.bubble_fe
+              span.firstEvt_h2
+                ==($pan1_pck2_lib[0])
+                br
+                ==($pan1_pck2_lib[1])
+            a href==($pan1_pck2_link) onclick==($gaq_pck_start+$gaq_pck2_pdt+$gaq_pck_end)
+              img src="pck2.png" alt="" height="144"
+              i
+                span.valignM==($pan1_pck2_capacity)
+            a.btPck href==($pan1_pck2_link) onclick==($gaq_pck_start+$gaq_pck2_btn+$gaq_pck_end)
+              span.evtC_price==($pan1_pck2_price)
+              img src="btPck.png" alt="" width="82" height="34"
+        
+        li.pan2
+          .pck3
+            h2.fl-l.bubble_fe
+              / span.firstEvt_h2 
+              span.firstEvt_h2.medium_txt 
+                ==($pan2_pck3_lib[0])
+                / br
+                / span.small_txt ==($pan2_pck3_lib[1])
+            a href==($pan2_pck3_link) onclick==($gaq_pck_start+$gaq_pck3_pdt+$gaq_pck_end)
+              img src="pck3.png" alt="" height="144"
+              i
+                span.valignM==($pan2_pck3_capacity)
+            a.btPck href==($pan2_pck3_link) onclick==($gaq_pck_start+$gaq_pck3_btn+$gaq_pck_end)
+              span.evtC_price==($pan2_pck3_price)
+              img src="btPck.png" alt="" width="82" height="34"
+
+          .pck4
+            h2.fl-l.bubble_fe
+              span.firstEvt_h2==($pan2_pck4_lib)
+            a href==($pan2_pck4_link) onclick==($gaq_pck_start+$gaq_pck4_pdt+$gaq_pck_end)
+              img src="pck4.png" alt="" height="144"
+              i
+                span.valignM==($pan2_pck4_capacity)
+            a.btPck href==($pan2_pck4_link) onclick==($gaq_pck_start+$gaq_pck4_btn+$gaq_pck_end)
+              span.evtC_price==($pan2_pck4_price)
+              img src="btPck.png" alt="" width="82" height="34"
+
+      #content-bt
+        a#evt-click href="javascript:void(0)"
+        ul.bt-carroussel
+          li.pckActif.pckOne
+            a#un href="javascript:void(0)" 1
+          li.pckTwo
+            a#deux href="javascript:void(0)" 2
+        
+        p autres choix
+
+      a.bt_RE href==($urlbase[0]+$bt_RE[0]+$bt_RE[1]) onclick==($gaq_pck_start+"'btnRayon-id"+$bt_RE[1]+"', "+$gaq_loc)
+        img src="btn_RE.png" width="262" height="34" alt=""
